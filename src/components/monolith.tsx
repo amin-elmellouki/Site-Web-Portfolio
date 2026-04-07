@@ -25,7 +25,7 @@ export function Monolith({
         <div className="section-header">
           <div className="max-w-3xl">
             <p className={labelTone}>{label}</p>
-            <p className="mt-5 font-serif text-[clamp(2.4rem,5.4vw,4.5rem)] leading-[0.98] tracking-[-0.04em] text-text-primary">
+            <p className="mt-5 font-display text-[clamp(2.4rem,5.4vw,4.5rem)] leading-[0.98] tracking-[-0.04em] text-text-primary">
               {title}
             </p>
           </div>

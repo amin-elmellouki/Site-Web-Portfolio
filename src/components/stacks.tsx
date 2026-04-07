@@ -37,9 +37,8 @@ export function Stacks() {
       <div className="section-inner">
         <div className="section-header">
           <div className="max-w-3xl">
-            <p className="section-kicker">Technologies</p>
-            <h2 className="mt-5 font-serif text-[clamp(2.4rem,4.8vw,4.3rem)] leading-[0.98] tracking-[-0.04em] text-text-primary">
-              Les outils que j&apos;utilise le plus selon le projet.
+            <h2 className="mt-5 font-display text-[clamp(2.4rem,4.8vw,4.3rem)] leading-[0.98] tracking-[-0.04em] text-text-primary">
+              Outils que j&apos;aime utiliser
             </h2>
           </div>
 
@@ -57,10 +56,9 @@ export function Stacks() {
               }`}
             >
               <div>
-                <p className="font-serif text-3xl leading-none tracking-[-0.035em] text-text-primary sm:text-[2rem]">
+                <p className="font-display text-3xl leading-none tracking-[-0.035em] text-text-primary sm:text-[2rem]">
                   {stack.name}
                 </p>
-                <p className="mt-2 section-kicker">{stack.role}</p>
               </div>
 
               <p className="max-w-2xl font-sans text-sm leading-7 text-text-secondary">

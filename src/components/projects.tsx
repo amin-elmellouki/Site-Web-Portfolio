@@ -60,19 +60,17 @@ const projects: Project[] = [
 
 export function Projects() {
   return (
-    <section id="work" className="section-shell bg-surface-low">
+    <section id="work" className="section-shell bg-surface">
       <div className="section-inner">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(18rem,0.8fr)] lg:items-end">
           <div className="max-w-4xl">
-            <p className="section-kicker">Projets réalisés</p>
-            <h2 className="mt-5 font-serif text-[clamp(2.6rem,5.4vw,4.9rem)] leading-[0.96] tracking-[-0.04em] text-text-primary">
-              Des projets web et mobile menés de l&apos;interface à la mise en
-              ligne.
+            <h2 className="mt-5 font-display text-[clamp(2.6rem,5.4vw,4.9rem)] leading-[0.96] tracking-[-0.04em] text-text-primary">
+              Projets réalisés
             </h2>
           </div>
           <p className="editorial-body max-w-xl lg:pl-12">
-            Chaque projet montre ma façon de travailler : cadrer, développer
-            et livrer un produit clair.
+            Chaque projet montre ma façon d&apos;accompagner un besoin réel :
+            cadrer, développer et livrer un produit clair.
           </p>
         </div>
 
@@ -103,7 +101,7 @@ export function Projects() {
                   <p className="section-kicker">
                     {String(index + 1).padStart(2, "0")} / {project.year}
                   </p>
-                  <h3 className="mt-4 font-serif text-[clamp(2rem,4vw,3.3rem)] leading-[0.98] tracking-[-0.035em] text-text-primary">
+                  <h3 className="mt-4 font-display text-[clamp(2rem,4vw,3.3rem)] leading-[0.98] tracking-[-0.035em] text-text-primary">
                     {project.title}
                   </h3>
 
@@ -169,22 +167,18 @@ function ProjectVisual({
 
   if (project.visual === "image" && project.image && project.imageAlt) {
     return (
-      <div className="noise relative min-h-88 bg-surface-high p-4 sm:p-5 lg:p-6">
-        <div className="absolute inset-y-0 left-0 hidden w-16 bg-wine md:block lg:w-24" />
-        <span className="absolute right-5 top-5 z-10 bg-surface px-3 py-2 font-sans text-[0.625rem] font-semibold uppercase tracking-[0.24em] text-text-primary">
-          Site éditorial / SEO
-        </span>
-        <div className="relative min-h-80 overflow-hidden md:ml-8 lg:ml-12">
+      <div className="relative min-h-88 overflow-hidden bg-surface-high p-3 sm:p-4">
+        <div className="relative min-h-80 overflow-hidden bg-surface">
           <Image
             src={project.image}
             alt={project.imageAlt}
             fill
-            className="object-cover object-top transition-transform duration-700 ease-out"
+            className="object-contain object-center transition-transform duration-700 ease-out"
             placeholder="blur"
             sizes="(min-width: 1024px) 55vw, 100vw"
           />
         </div>
-        <span className="pointer-events-none absolute bottom-4 right-5 font-serif text-6xl leading-none tracking-[-0.05em] text-text-primary/10 sm:text-7xl">
+        <span className="pointer-events-none absolute bottom-4 right-5 font-accent text-6xl leading-none tracking-[-0.05em] text-text-primary/10 sm:text-7xl">
           {marker}
         </span>
       </div>
@@ -198,7 +192,7 @@ function ProjectVisual({
           <div className="flex min-h-64 flex-col justify-between bg-wine px-5 py-5 sm:px-6 sm:py-6">
             <div>
               <p className="section-kicker section-kicker-wine">Pipeline</p>
-              <p className="mt-4 font-serif text-5xl leading-none tracking-[-0.05em] text-text-primary sm:text-6xl">
+              <p className="mt-4 font-display text-5xl leading-none tracking-[-0.05em] text-text-primary sm:text-6xl">
                 CI/CD
               </p>
             </div>
@@ -222,7 +216,7 @@ function ProjectVisual({
           </div>
         </div>
 
-        <span className="pointer-events-none absolute bottom-4 right-5 font-serif text-6xl leading-none tracking-[-0.05em] text-text-primary/10 sm:text-7xl">
+        <span className="pointer-events-none absolute bottom-4 right-5 font-accent text-6xl leading-none tracking-[-0.05em] text-text-primary/10 sm:text-7xl">
           {marker}
         </span>
       </div>
@@ -235,7 +229,7 @@ function ProjectVisual({
         <div className="flex min-h-64 flex-col justify-between bg-surface px-5 py-5 sm:px-6 sm:py-6">
           <div>
             <p className="section-kicker section-kicker-light">API</p>
-            <p className="mt-4 font-serif text-4xl leading-none tracking-[-0.045em] text-text-primary sm:text-5xl">
+            <p className="mt-4 font-display text-4xl leading-none tracking-[-0.045em] text-text-primary sm:text-5xl">
               FastAPI
             </p>
           </div>
@@ -248,20 +242,20 @@ function ProjectVisual({
         <div className="grid gap-4">
           <div className="flex flex-col justify-between bg-surface-high px-5 py-5 sm:px-6 sm:py-6">
             <p className="section-kicker">Admin</p>
-            <p className="mt-4 font-serif text-3xl leading-none tracking-[-0.04em] text-text-primary">
+            <p className="mt-4 font-display text-3xl leading-none tracking-[-0.04em] text-text-primary">
               Back-office
             </p>
           </div>
           <div className="flex flex-col justify-between bg-wine px-5 py-5 sm:px-6 sm:py-6">
             <p className="section-kicker section-kicker-wine">Mobile</p>
-            <p className="mt-4 font-serif text-3xl leading-none tracking-[-0.04em] text-text-primary">
+            <p className="mt-4 font-display text-3xl leading-none tracking-[-0.04em] text-text-primary">
               iOS / Android
             </p>
           </div>
         </div>
       </div>
 
-      <span className="pointer-events-none absolute bottom-4 right-5 font-serif text-6xl leading-none tracking-[-0.05em] text-text-primary/10 sm:text-7xl">
+      <span className="pointer-events-none absolute bottom-4 right-5 font-accent text-6xl leading-none tracking-[-0.05em] text-text-primary/10 sm:text-7xl">
         {marker}
       </span>
     </div>
