@@ -8,14 +8,14 @@ export function Hero() {
         <div className="noise bg-forest section-panel">
           <div className="max-w-3xl">
             <p className="section-kicker section-kicker-light reveal-rise delay-1">
-              Développeur full stack / Orléans / France
+              Développeur full stack / Orléans, France
             </p>
 
             <h1 className="mt-6 max-w-[11ch] font-serif text-[clamp(3.6rem,8vw,7.2rem)] leading-[0.9] tracking-[-0.05em] text-text-primary reveal-rise delay-2">
               Amin EL MELLOUKI
             </h1>
 
-            <p className="mt-6 max-w-[var(--reading-max)] font-sans text-base leading-8 text-text-primary/78 reveal-rise delay-3">
+            <p className="mt-6 max-w-(--reading-max) font-sans text-base leading-8 text-text-primary/78 reveal-rise delay-3">
               Je développe des applications web et mobile, avec une attention
               particulière à la clarté, à la fiabilité et à la mise en ligne.
             </p>

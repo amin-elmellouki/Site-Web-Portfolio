@@ -16,7 +16,7 @@ export function Nav() {
       aria-label="Navigation principale"
       className="fixed inset-x-0 top-0 z-50 bg-surface"
     >
-      <div className="nav-inner px-[var(--page-gutter)] py-4">
+      <div className="nav-inner px-(--page-gutter) py-4">
         <div className="flex items-center justify-between gap-6">
           <a href="#page-top" onClick={() => setOpen(false)} className="grid">
             <span className="section-kicker section-kicker-light">
@@ -73,7 +73,7 @@ export function Nav() {
           open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="nav-inner grid gap-3 px-[var(--page-gutter)] py-5">
+        <div className="nav-inner grid gap-3 px-(--page-gutter) py-5">
           {links.map((link) => (
             <a
               key={link.href}

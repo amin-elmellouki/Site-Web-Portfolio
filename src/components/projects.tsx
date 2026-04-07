@@ -169,12 +169,12 @@ function ProjectVisual({
 
   if (project.visual === "image" && project.image && project.imageAlt) {
     return (
-      <div className="noise relative min-h-[22rem] bg-surface-high p-4 sm:p-5 lg:p-6">
+      <div className="noise relative min-h-88 bg-surface-high p-4 sm:p-5 lg:p-6">
         <div className="absolute inset-y-0 left-0 hidden w-16 bg-wine md:block lg:w-24" />
         <span className="absolute right-5 top-5 z-10 bg-surface px-3 py-2 font-sans text-[0.625rem] font-semibold uppercase tracking-[0.24em] text-text-primary">
           Site éditorial / SEO
         </span>
-        <div className="relative min-h-[20rem] overflow-hidden md:ml-8 lg:ml-12">
+        <div className="relative min-h-80 overflow-hidden md:ml-8 lg:ml-12">
           <Image
             src={project.image}
             alt={project.imageAlt}
@@ -193,9 +193,9 @@ function ProjectVisual({
 
   if (project.visual === "pipeline") {
     return (
-      <div className="noise relative min-h-[22rem] bg-surface-high p-5 sm:p-6 lg:p-8">
+      <div className="noise relative min-h-88 bg-surface-high p-5 sm:p-6 lg:p-8">
         <div className="grid gap-4 md:grid-cols-[0.85fr_1.15fr]">
-          <div className="flex min-h-[16rem] flex-col justify-between bg-wine px-5 py-5 sm:px-6 sm:py-6">
+          <div className="flex min-h-64 flex-col justify-between bg-wine px-5 py-5 sm:px-6 sm:py-6">
             <div>
               <p className="section-kicker section-kicker-wine">Pipeline</p>
               <p className="mt-4 font-serif text-5xl leading-none tracking-[-0.05em] text-text-primary sm:text-6xl">
@@ -230,9 +230,9 @@ function ProjectVisual({
   }
 
   return (
-    <div className="noise relative min-h-[22rem] bg-forest p-5 sm:p-6 lg:p-8">
+    <div className="noise relative min-h-88 bg-forest p-5 sm:p-6 lg:p-8">
       <div className="grid h-full gap-4 md:grid-cols-[1.1fr_0.9fr]">
-        <div className="flex min-h-[16rem] flex-col justify-between bg-surface px-5 py-5 sm:px-6 sm:py-6">
+        <div className="flex min-h-64 flex-col justify-between bg-surface px-5 py-5 sm:px-6 sm:py-6">
           <div>
             <p className="section-kicker section-kicker-light">API</p>
             <p className="mt-4 font-serif text-4xl leading-none tracking-[-0.045em] text-text-primary sm:text-5xl">
