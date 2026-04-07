@@ -11,8 +11,8 @@ const contactLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/amin-el-mellouki-a924012b5/",
-    text: "linkedin.com/in/amin-el-mellouki",
+    href: "https://www.linkedin.com/in/amin-e-a924012b5/",
+    text: "linkedin.com/in/amin-e-a924012b5",
   },
 ];
 
@@ -22,22 +22,17 @@ export function Contact() {
       <div className="section-inner">
         <div className="section-header">
           <div className="max-w-3xl">
-            <p className="section-kicker">Contact</p>
-            <h2 className="mt-5 font-serif text-[clamp(2.6rem,5.4vw,4.8rem)] leading-[0.96] tracking-[-0.04em] text-text-primary">
+            <h2 className="mt-5 font-display text-[clamp(2.6rem,5.4vw,4.8rem)] leading-[0.96] tracking-[-0.04em] text-text-primary">
               Parlons de votre projet.
             </h2>
           </div>
 
-          <p className="editorial-body section-header-copy">
-            Je suis disponible pour une mission freelance, un renfort produit
-            ou un accompagnement plus long.
-          </p>
         </div>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)]">
           <div className="noise bg-wine section-panel">
             <p className="section-kicker section-kicker-wine">Disponible</p>
-            <p className="mt-4 max-w-xl font-serif text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.01] tracking-[-0.04em] text-text-primary">
+            <p className="mt-4 max-w-xl font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.01] tracking-[-0.04em] text-text-primary">
               Web, mobile, front-end et back-end.
             </p>
             <p className="mt-5 max-w-lg font-sans text-sm leading-7 text-text-primary/72">
@@ -50,7 +45,30 @@ export function Contact() {
                 href="mailto:amin.elmellouki1@gmail.com"
                 className="press-button"
               >
-                Écrire un message
+                <span className="press-button__label">Écrire un message</span>
+                <span className="press-button__icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="press-button__icon-svg"
+                  >
+                    <path
+                      d="M17 7L7 17"
+                      stroke="currentColor"
+                      strokeWidth="1.75"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M8 7H17V16"
+                      stroke="currentColor"
+                      strokeWidth="1.75"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
               </a>
             </div>
           </div>
