@@ -23,7 +23,7 @@ const syne = Syne({
   display: "swap",
 });
 
-const siteUrl = "https://aminelmellouki.dev";
+const siteUrl = "https://aminelmellouki.com";
 const siteDescription =
   "Développeur full stack freelance à Orléans. J'accompagne les équipes, clubs et structures dans la conception d'applications web et mobile claires, fiables et prêtes à être mises en ligne.";
 
