@@ -22,17 +22,16 @@ export function Contact() {
       <div className="section-inner">
         <div className="section-header">
           <div className="max-w-3xl">
-            <h2 className="mt-5 font-display text-[clamp(2.6rem,5.4vw,4.8rem)] leading-[0.96] tracking-[-0.04em] text-text-primary">
+            <h2 className="mt-5 font-display text-4xl leading-[0.98] text-text-primary sm:text-5xl lg:text-6xl xl:text-7xl">
               Parlons de votre projet.
             </h2>
           </div>
-
         </div>
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)]">
+        <div className="mt-8 grid gap-4 sm:mt-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)]">
           <div className="noise bg-wine section-panel">
             <p className="section-kicker section-kicker-wine">Disponible</p>
-            <p className="mt-4 max-w-xl font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.01] tracking-[-0.04em] text-text-primary">
+            <p className="mt-4 max-w-xl font-display text-3xl leading-[1.04] text-text-primary sm:text-4xl lg:text-5xl">
               Web, mobile, front-end et back-end.
             </p>
             <p className="mt-5 max-w-lg font-sans text-sm leading-7 text-text-primary/72">
@@ -104,7 +103,7 @@ function ContactLink({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-sans text-sm leading-7 text-text-primary transition-colors hover:text-forest-light"
+        className="break-words font-sans text-sm leading-7 text-text-primary transition-colors hover:text-forest-light"
       >
         {text}
       </a>

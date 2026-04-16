@@ -60,7 +60,7 @@ export default function OgImage() {
                 margin: 0,
                 fontSize: 13,
                 fontWeight: 700,
-                letterSpacing: "0.3em",
+                letterSpacing: 0,
                 textTransform: "uppercase",
                 color: "#a3d0bc",
               }}
@@ -72,7 +72,7 @@ export default function OgImage() {
                 margin: 0,
                 fontSize: 13,
                 fontWeight: 700,
-                letterSpacing: "0.26em",
+                letterSpacing: 0,
                 textTransform: "uppercase",
                 color: "rgba(232,230,227,0.45)",
               }}
@@ -104,7 +104,7 @@ export default function OgImage() {
                   fontSize: 90,
                   fontWeight: 700,
                   lineHeight: 0.9,
-                  letterSpacing: "-0.05em",
+                  letterSpacing: 0,
                   whiteSpace: "pre-wrap",
                 }}
               >
@@ -145,7 +145,7 @@ export default function OgImage() {
                     margin: 0,
                     fontSize: 14,
                     fontWeight: 700,
-                    letterSpacing: "0.26em",
+                    letterSpacing: 0,
                     color: item.color,
                   }}
                 >

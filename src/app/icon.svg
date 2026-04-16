@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AEM">
+  <rect width="64" height="64" fill="#033325"/>
+  <rect x="0" y="0" width="64" height="64" fill="none" stroke="#a3d0bc" stroke-width="4"/>
+  <rect x="46" y="46" width="18" height="18" fill="#2e121e"/>
+  <text
+    x="32"
+    y="36"
+    fill="#e8e6e3"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="19"
+    font-weight="700"
+    text-anchor="middle"
+    dominant-baseline="middle"
+  >AEM</text>
+</svg>
