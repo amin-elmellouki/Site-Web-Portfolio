@@ -383,10 +383,6 @@ button:focus-visible {
 }
 
 @media (max-width: 420px) {
-  .press-button {
-    width: 100%;
-  }
-
   .press-button__label {
     padding-inline: 1rem;
   }
