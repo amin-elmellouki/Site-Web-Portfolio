@@ -25,13 +25,13 @@ export function Monolith({
         <div className="section-header">
           <div className="max-w-3xl">
             <p className={labelTone}>{label}</p>
-            <p className="mt-5 font-display text-[clamp(2.4rem,5.4vw,4.5rem)] leading-[0.98] tracking-[-0.04em] text-text-primary">
+            <p className="mt-5 font-display text-4xl leading-[1.02] text-text-primary sm:text-5xl lg:text-6xl">
               {title}
             </p>
           </div>
 
           <div className="section-header-copy lg:pb-1">
-            <p className="font-sans text-[0.625rem] font-semibold uppercase tracking-[0.28em] text-text-primary/45">
+            <p className="font-sans text-xs font-semibold uppercase text-text-primary/45">
               {note}
             </p>
             <p className="mt-4 font-sans text-sm leading-7 text-text-primary/72">

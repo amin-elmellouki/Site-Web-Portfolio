@@ -9,7 +9,7 @@ type Project = {
   outcome: string;
   year: string;
   status?: string;
-  href: string;
+  href?: string;
   visual: "platform" | "image" | "pipeline";
   image?: StaticImageData;
   imageAlt?: string;
@@ -26,7 +26,6 @@ const projects: Project[] = [
     outcome: "Développement en cours pour un usage quotidien par le club.",
     year: "2026",
     status: "En cours",
-    href: "https://github.com/amin-elmellouki/orleans-futsal",
     visual: "platform",
     accentClass: "text-forest-light",
   },
@@ -38,7 +37,7 @@ const projects: Project[] = [
     stack: "JavaScript / Vite / Tailwind CSS / PHP",
     outcome: "Un site plus lisible, plus crédible et plus simple à maintenir.",
     year: "2025",
-    href: "https://github.com/amin-elmellouki/refont-orleans-futsal",
+    href: "https://orleansfutsal.fr",
     visual: "image",
     image: oftSiteHomepage,
     imageAlt: "Aperçu de la refonte du site Orléans Futsal",
@@ -52,7 +51,6 @@ const projects: Project[] = [
     stack: "Django 5 / MySQL / Docker / GitHub Actions",
     outcome: "Un projet structuré pour l'équipe, avec une chaîne de livraison claire.",
     year: "2025",
-    href: "https://github.com/amin-elmellouki/SAE_Consolidation",
     visual: "pipeline",
     accentClass: "text-forest-light",
   },
@@ -62,26 +60,26 @@ export function Projects() {
   return (
     <section id="work" className="section-shell bg-surface">
       <div className="section-inner">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(18rem,0.8fr)] lg:items-end">
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(18rem,0.8fr)] lg:items-end">
           <div className="max-w-4xl">
-            <h2 className="mt-5 font-display text-[clamp(2.6rem,5.4vw,4.9rem)] leading-[0.96] tracking-[-0.04em] text-text-primary">
+            <h2 className="mt-5 font-display text-4xl leading-[0.98] text-text-primary sm:text-5xl lg:text-6xl xl:text-7xl">
               Projets réalisés
             </h2>
           </div>
-          <p className="editorial-body max-w-xl lg:pl-12">
+          <p className="editorial-body max-w-xl lg:pl-8 xl:pl-12">
             Chaque projet montre ma façon d&apos;accompagner un besoin réel :
             cadrer, développer et livrer un produit clair.
           </p>
         </div>
 
-        <div className="mt-16 space-y-20 md:mt-20 md:space-y-24 lg:space-y-32">
+        <div className="mt-12 space-y-16 sm:mt-16 md:mt-20 md:space-y-24 lg:space-y-32">
           {projects.map((project, index) => {
             const reverse = index % 2 === 1;
 
             return (
               <article
                 key={project.title}
-                className="project-row grid gap-8 lg:grid-cols-12 lg:items-start"
+                className="project-row grid gap-7 sm:gap-8 lg:grid-cols-12 lg:items-start"
               >
                 <div
                   className={`project-frame relative overflow-hidden lg:col-span-7 ${
@@ -101,13 +99,13 @@ export function Projects() {
                   <p className="section-kicker">
                     {String(index + 1).padStart(2, "0")} / {project.year}
                   </p>
-                  <h3 className="mt-4 font-display text-[clamp(2rem,4vw,3.3rem)] leading-[0.98] tracking-[-0.035em] text-text-primary">
+                  <h3 className="mt-4 font-display text-3xl leading-[1.02] text-text-primary sm:text-4xl lg:text-5xl">
                     {project.title}
                   </h3>
 
                   {project.status ? (
                     <p
-                      className={`mt-4 font-sans text-[0.6875rem] font-semibold uppercase tracking-[0.28em] ${project.accentClass}`}
+                      className={`mt-4 font-sans text-xs font-semibold uppercase ${project.accentClass}`}
                     >
                       {project.status}
                     </p>
@@ -138,14 +136,16 @@ export function Projects() {
                     </div>
                   </dl>
 
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-trace mt-8"
-                  >
-                    Explorer le projet
-                  </a>
+                  {project.href ? (
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-trace mt-8"
+                    >
+                      Explorer le projet
+                    </a>
+                  ) : null}
                 </div>
               </article>
             );
@@ -167,8 +167,8 @@ function ProjectVisual({
 
   if (project.visual === "image" && project.image && project.imageAlt) {
     return (
-      <div className="relative min-h-88 overflow-hidden bg-surface-high p-3 sm:p-4">
-        <div className="relative min-h-80 overflow-hidden bg-surface">
+      <div className="relative overflow-hidden bg-surface-high p-3 sm:p-4">
+        <div className="relative aspect-[4/3] overflow-hidden bg-surface sm:aspect-[16/10]">
           <Image
             src={project.image}
             alt={project.imageAlt}
@@ -178,7 +178,7 @@ function ProjectVisual({
             sizes="(min-width: 1024px) 55vw, 100vw"
           />
         </div>
-        <span className="pointer-events-none absolute bottom-4 right-5 font-accent text-6xl leading-none tracking-[-0.05em] text-text-primary/10 sm:text-7xl">
+        <span className="pointer-events-none absolute bottom-4 right-5 font-accent text-5xl leading-none text-text-primary/10 sm:text-7xl">
           {marker}
         </span>
       </div>
@@ -187,12 +187,12 @@ function ProjectVisual({
 
   if (project.visual === "pipeline") {
     return (
-      <div className="noise relative min-h-88 bg-surface-high p-5 sm:p-6 lg:p-8">
+      <div className="noise relative min-h-[21rem] bg-surface-high p-4 sm:min-h-88 sm:p-6 lg:p-8">
         <div className="grid gap-4 md:grid-cols-[0.85fr_1.15fr]">
-          <div className="flex min-h-64 flex-col justify-between bg-wine px-5 py-5 sm:px-6 sm:py-6">
+          <div className="flex min-h-[13rem] flex-col justify-between bg-wine px-5 py-5 sm:min-h-64 sm:px-6 sm:py-6">
             <div>
               <p className="section-kicker section-kicker-wine">Pipeline</p>
-              <p className="mt-4 font-display text-5xl leading-none tracking-[-0.05em] text-text-primary sm:text-6xl">
+              <p className="mt-4 font-display text-4xl leading-none text-text-primary sm:text-6xl">
                 CI/CD
               </p>
             </div>
@@ -216,7 +216,7 @@ function ProjectVisual({
           </div>
         </div>
 
-        <span className="pointer-events-none absolute bottom-4 right-5 font-accent text-6xl leading-none tracking-[-0.05em] text-text-primary/10 sm:text-7xl">
+        <span className="pointer-events-none absolute bottom-4 right-5 font-accent text-5xl leading-none text-text-primary/10 sm:text-7xl">
           {marker}
         </span>
       </div>
@@ -224,12 +224,12 @@ function ProjectVisual({
   }
 
   return (
-    <div className="noise relative min-h-88 bg-forest p-5 sm:p-6 lg:p-8">
+    <div className="noise relative min-h-[21rem] bg-forest p-4 sm:min-h-88 sm:p-6 lg:p-8">
       <div className="grid h-full gap-4 md:grid-cols-[1.1fr_0.9fr]">
-        <div className="flex min-h-64 flex-col justify-between bg-surface px-5 py-5 sm:px-6 sm:py-6">
+        <div className="flex min-h-[13rem] flex-col justify-between bg-surface px-5 py-5 sm:min-h-64 sm:px-6 sm:py-6">
           <div>
             <p className="section-kicker section-kicker-light">API</p>
-            <p className="mt-4 font-display text-4xl leading-none tracking-[-0.045em] text-text-primary sm:text-5xl">
+            <p className="mt-4 font-display text-4xl leading-none text-text-primary sm:text-5xl">
               FastAPI
             </p>
           </div>
@@ -242,20 +242,20 @@ function ProjectVisual({
         <div className="grid gap-4">
           <div className="flex flex-col justify-between bg-surface-high px-5 py-5 sm:px-6 sm:py-6">
             <p className="section-kicker">Admin</p>
-            <p className="mt-4 font-display text-3xl leading-none tracking-[-0.04em] text-text-primary">
+            <p className="mt-4 font-display text-3xl leading-none text-text-primary">
               Back-office
             </p>
           </div>
           <div className="flex flex-col justify-between bg-wine px-5 py-5 sm:px-6 sm:py-6">
             <p className="section-kicker section-kicker-wine">Mobile</p>
-            <p className="mt-4 font-display text-3xl leading-none tracking-[-0.04em] text-text-primary">
+            <p className="mt-4 font-display text-3xl leading-none text-text-primary">
               iOS / Android
             </p>
           </div>
         </div>
       </div>
 
-      <span className="pointer-events-none absolute bottom-4 right-5 font-accent text-6xl leading-none tracking-[-0.05em] text-text-primary/10 sm:text-7xl">
+      <span className="pointer-events-none absolute bottom-4 right-5 font-accent text-5xl leading-none text-text-primary/10 sm:text-7xl">
         {marker}
       </span>
     </div>

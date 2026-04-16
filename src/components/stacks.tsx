@@ -37,7 +37,7 @@ export function Stacks() {
       <div className="section-inner">
         <div className="section-header">
           <div className="max-w-3xl">
-            <h2 className="mt-5 font-display text-[clamp(2.4rem,4.8vw,4.3rem)] leading-[0.98] tracking-[-0.04em] text-text-primary">
+            <h2 className="mt-5 font-display text-4xl leading-[1.02] text-text-primary sm:text-5xl lg:text-6xl">
               Outils que j&apos;aime utiliser
             </h2>
           </div>
@@ -47,16 +47,16 @@ export function Stacks() {
           </p>
         </div>
 
-        <div className="mt-8 space-y-3">
+        <div className="mt-8 space-y-3 sm:mt-10">
           {stacks.map((stack, index) => (
             <div
               key={stack.name}
-              className={`grid gap-4 px-6 py-6 md:grid-cols-[minmax(14rem,0.72fr)_minmax(0,1fr)] ${
+              className={`grid gap-4 px-4 py-5 sm:px-6 sm:py-6 md:grid-cols-[minmax(12rem,0.72fr)_minmax(0,1fr)] ${
                 index % 2 === 0 ? "bg-surface-low" : "bg-surface-high"
               }`}
             >
               <div>
-                <p className="font-display text-3xl leading-none tracking-[-0.035em] text-text-primary sm:text-[2rem]">
+                <p className="font-display text-2xl leading-none text-text-primary sm:text-[2rem]">
                   {stack.name}
                 </p>
               </div>

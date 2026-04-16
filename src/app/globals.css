@@ -16,12 +16,18 @@
   --font-sans: var(--font-body);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
-  --page-gutter: clamp(1.25rem, 4vw, 4rem);
-  --section-space: clamp(4.5rem, 6vw, 6.5rem);
+  --page-gutter: clamp(1rem, 5vw, 4rem);
+  --section-space: clamp(3.75rem, 7vw, 6.5rem);
   --inner-max: 86rem;
   --reading-max: 42rem;
-  --panel-padding: clamp(1.5rem, 3vw, 2.5rem);
+  --panel-padding: clamp(1rem, 3vw, 2.5rem);
   --header-height: 4.75rem;
   --ghost-outline: rgb(232 230 227 / 0.15);
   --accent-outline: rgb(163 208 188 / 0.24);
@@ -45,6 +51,13 @@ body {
 body,
 main {
   overflow-x: clip;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
 }
 
 h1,
@@ -108,9 +121,9 @@ section[id] {
 
 .section-kicker {
   font-family: var(--font-accent), sans-serif;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.24em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--color-text-secondary);
 }
@@ -128,6 +141,7 @@ section[id] {
   font-size: 0.95rem;
   line-height: 1.9;
   color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
 }
 
 .section-panel {
@@ -159,8 +173,10 @@ section[id] {
 .press-button {
   display: inline-grid;
   grid-auto-flow: column;
+  grid-template-columns: minmax(0, auto) auto;
   align-items: center;
   gap: 0.5rem;
+  max-width: 100%;
   min-height: 3.5rem;
   padding: 0.35rem;
   border: 1px solid rgb(232 230 227 / 0.14);
@@ -172,9 +188,9 @@ section[id] {
     );
   color: var(--color-text-primary);
   font-family: var(--font-sans), sans-serif;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.26em;
+  letter-spacing: 0;
   text-transform: uppercase;
   overflow: hidden;
   transition:
@@ -188,10 +204,14 @@ section[id] {
 .press-button__label {
   display: inline-flex;
   min-height: calc(3.5rem - 0.7rem);
+  min-width: 0;
   align-items: center;
+  justify-content: center;
   padding: 0.95rem 1.35rem 0.95rem 1.5rem;
   background: var(--color-text-primary);
   color: var(--color-surface);
+  text-align: center;
+  overflow-wrap: anywhere;
   transition:
     transform 180ms ease,
     background-color 180ms ease,
@@ -254,12 +274,14 @@ section[id] {
   display: inline-flex;
   align-items: center;
   gap: 0.7rem;
+  max-width: 100%;
   font-family: var(--font-accent), sans-serif;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.24em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--color-forest-light);
+  overflow-wrap: anywhere;
 }
 
 .font-display {
@@ -284,9 +306,9 @@ section[id] {
   background: var(--color-forest-light);
   color: var(--color-surface);
   font-family: var(--font-sans), sans-serif;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.24em;
+  letter-spacing: 0;
   text-transform: uppercase;
   transition: top 0.12s ease;
 }
@@ -357,6 +379,20 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .press-button {
+    width: 100%;
+  }
+
+  .press-button__label {
+    padding-inline: 1rem;
+  }
+
+  .press-button__icon {
+    width: 2.55rem;
   }
 }
 

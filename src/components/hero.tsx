@@ -2,7 +2,7 @@ export function Hero() {
   return (
     <section
       id="intro"
-      className="section-shell pb-16 pt-[calc(var(--header-height)+1.5rem)] lg:pb-18"
+      className="section-shell pb-14 pt-[calc(var(--header-height)+1rem)] sm:pb-16 lg:pb-18"
     >
       <div className="section-inner">
         <div className="noise bg-forest section-panel">
@@ -11,12 +11,12 @@ export function Hero() {
               Développeur full stack freelance / Orléans, France
             </p>
 
-            <h1 className="mt-6 max-w-[11ch] font-display text-[clamp(3.6rem,8vw,7.2rem)] leading-[0.9] tracking-[-0.05em] text-text-primary reveal-rise delay-2">
+            <h1 className="mt-5 max-w-[12ch] font-display text-[3.05rem] leading-[0.92] text-text-primary reveal-rise delay-2 sm:mt-6 sm:text-[4.4rem] md:text-[5.4rem] lg:text-[6.4rem] xl:text-[7rem]">
               Amin EL MELLOUKI
             </h1>
 
-            <p className="mt-6 max-w-(--reading-max) font-sans text-base leading-8 text-text-primary/78 reveal-rise delay-3">
-              J&apos;accompagne les équipes, clubs et structures qui veulent
+            <p className="mt-5 max-w-(--reading-max) font-sans text-[0.98rem] leading-7 text-text-primary/78 reveal-rise delay-3 sm:mt-6 sm:text-base sm:leading-8">
+              J&apos;accompagne les structures qui veulent
               concevoir ou faire évoluer un produit web ou mobile clair,
               fiable et prêt à être mis en ligne.
             </p>
